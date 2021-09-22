@@ -7,7 +7,7 @@ let numberOfPersonsElement = document.getElementById("number");
 let tableContentElement = document.getElementById("table-content");
 
 const ingredients = getIngredients();
-let amountPersons = 5;
+let amountPersons = 4;
 
 /**
  * Initialize table of Ingredients
