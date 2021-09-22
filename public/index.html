@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zutatenrechner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="body">
+    <table class="center">
+        <thead>
+            <tr>
+                <th scope="col">
+                    <h2>Zutaten</h2>
+                </th>
+                <th scope="col">
+                    <div class="ingredients-amount-heading">
+                        <button class="button  decrement-button" id="decrement"><img src="assets/minus.svg"
+                                alt="-" /></button>
+                        <div class="ingredients-amount-heading-text">Zutaten für <strong id='number'></strong>
+                        </div>
+                        <button class="button increment-button" id="increment"> <img src="assets/plus.svg"
+                                alt="+" /></button>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody id="table-content">
+        </tbody>
+    </table>
+    <script type="module" src='ingredientsCalculator.js'></script>
+</body>
+
+</html>
