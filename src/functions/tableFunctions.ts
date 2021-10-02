@@ -7,7 +7,7 @@ export function updateIngredientsTable(
   ingredients: Ingredient[]
 ) {
   numberOfPersonsElement.innerHTML =
-    amountPersons > 1 ? amountPersons.toString() + " Personen" : "eine Person";
+    amountPersons > 1 ? amountPersons + " Personen" : "eine Person";
 
   tableContentElement.innerHTML = createTableContent(
     ingredients,

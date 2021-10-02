@@ -10,36 +10,21 @@ let amountPersons = 4;
  * Initialize table of Ingredients
  */
 if (tableContentElement != null && numberOfPersonsElement) {
-  updateIngredientsTable(
-    tableContentElement,
-    numberOfPersonsElement,
-    amountPersons,
-    ingredients
-  );
+    updateIngredientsTable(tableContentElement, numberOfPersonsElement, amountPersons, ingredients);
 }
 if (addElement != null) {
-  addElement.addEventListener("click", function () {
-    amountPersons += 1;
-    if (tableContentElement != null && numberOfPersonsElement)
-      updateIngredientsTable(
-        tableContentElement,
-        numberOfPersonsElement,
-        amountPersons,
-        ingredients
-      );
-  });
+    addElement.addEventListener("click", function () {
+        amountPersons += 1;
+        if (tableContentElement != null && numberOfPersonsElement)
+            updateIngredientsTable(tableContentElement, numberOfPersonsElement, amountPersons, ingredients);
+    });
 }
 if (removeElement != null) {
-  removeElement.addEventListener("click", function () {
-    if (amountPersons > 1) {
-      amountPersons -= 1;
-      if (tableContentElement != null && numberOfPersonsElement)
-        updateIngredientsTable(
-          tableContentElement,
-          numberOfPersonsElement,
-          amountPersons,
-          ingredients
-        );
-    }
-  });
+    removeElement.addEventListener("click", function () {
+        if (amountPersons > 1) {
+            amountPersons -= 1;
+            if (tableContentElement != null && numberOfPersonsElement)
+                updateIngredientsTable(tableContentElement, numberOfPersonsElement, amountPersons, ingredients);
+        }
+    });
 }

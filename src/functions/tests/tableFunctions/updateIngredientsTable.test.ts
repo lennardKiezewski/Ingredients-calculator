@@ -37,14 +37,16 @@ test("changes html correctly after function is called", () => {
   let numberOfPersonsElement = document.getElementById("number");
   let tableContentElement = document.getElementById("table-content");
 
-  updateIngredientsTable(
-    tableContentElement,
-    numberOfPersonsElement,
-    5,
-    testIngredients
-  );
-  expect(numberOfPersonsElement.innerHTML).toBe("5 Personen");
-  expect(tableContentElement.innerHTML).toBe(
-    '<tr><td>Milch</td><td class="ingredients-table-amount"><span>0.625</span> l</td></tr><tr><td>Eier</td><td class="ingredients-table-amount"><span>5</span> Stk</td></tr><tr><td>Mehl</td><td class="ingredients-table-amount"><span>375</span> g</td></tr><tr><td>Öl</td><td class="ingredients-table-amount"><span>2.5</span> EL</td></tr><tr><td>Salz</td><td class="ingredients-table-amount"><span>1.25</span> TL</td></tr><tr><td>Zucker</td><td class="ingredients-table-amount"><span>2.5</span> EL</td></tr>'
-  );
+  if (tableContentElement && numberOfPersonsElement) {
+    updateIngredientsTable(
+      tableContentElement,
+      numberOfPersonsElement,
+      5,
+      testIngredients
+    );
+    expect(numberOfPersonsElement.innerHTML).toBe("5 Personen");
+    expect(tableContentElement.innerHTML).toBe(
+      '<tr><td>Milch</td><td class="ingredients-table-amount"><span>0.625</span> l</td></tr><tr><td>Eier</td><td class="ingredients-table-amount"><span>5</span> Stk</td></tr><tr><td>Mehl</td><td class="ingredients-table-amount"><span>375</span> g</td></tr><tr><td>Öl</td><td class="ingredients-table-amount"><span>2.5</span> EL</td></tr><tr><td>Salz</td><td class="ingredients-table-amount"><span>1.25</span> TL</td></tr><tr><td>Zucker</td><td class="ingredients-table-amount"><span>2.5</span> EL</td></tr>'
+    );
+  }
 });
